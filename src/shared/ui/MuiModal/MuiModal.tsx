@@ -94,38 +94,40 @@ function MuiModal(props: I_Props) {
             </div>
           </div>
           <div className="modal_pizza_right">
-            <h2>{pizza?.name}</h2>
-            <p>
-              {size} см {type} тесто{" "}
-            </p>
-            <p>{pizza?.desc}</p>
-            <Stack className="stackSize" direction="row">
-              {pizza &&
-                pizza.sizes.map((prev, i) => (
-                  <Button
-                    key={prev.id}
-                    onClick={() => handelIndexSize(i)}
-                    variant={indexSize === i ? "contained" : "text"}
-                    color="warning"
-                  >
-                    {prev.size}
-                  </Button>
-                ))}
-            </Stack>
-            <Stack className="stackType" direction="row">
-              {pizza &&
-                pizza.sizes[indexSize].type.map((prev, i) => (
-                  <Button
-                    key={prev.id}
-                    onClick={() => handleIndexType(i)}
-                    disabled={!prev.isShow}
-                    variant={indexType === i ? "contained" : "text"}
-                    color="warning"
-                  >
-                    {prev.typeName}
-                  </Button>
-                ))}
-            </Stack>
+            <div>
+              <h2>{pizza?.name}</h2>
+              <p>
+                {size} см {type} тесто{" "}
+              </p>
+              <p>{pizza?.desc}</p>
+              <Stack className="stackSize" direction="row">
+                {pizza &&
+                  pizza.sizes.map((prev, i) => (
+                    <Button
+                      key={prev.id}
+                      onClick={() => handelIndexSize(i)}
+                      variant={indexSize === i ? "contained" : "text"}
+                      color="warning"
+                    >
+                      {prev.size}
+                    </Button>
+                  ))}
+              </Stack>
+              <Stack className="stackType" direction="row">
+                {pizza &&
+                  pizza.sizes[indexSize].type.map((prev, i) => (
+                    <Button
+                      key={prev.id}
+                      onClick={() => handleIndexType(i)}
+                      disabled={!prev.isShow}
+                      variant={indexType === i ? "contained" : "text"}
+                      color="warning"
+                    >
+                      {prev.typeName}
+                    </Button>
+                  ))}
+              </Stack>
+            </div>
             <Button
               onClick={() => addDeliver(pizza)}
               className="btn_buy"
