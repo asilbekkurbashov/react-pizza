@@ -1,0 +1,57 @@
+.box_pizza {
+  display: grid;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  transition: box-shadow 250ms;
+  cursor: pointer;
+  h2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  img {
+    display: flex;
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: 0px 10px 18px rgba(237, 108, 2, 0.4);
+  }
+}
+
+.bottom_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  .price {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+}
+
+.favourite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  svg {
+    font-size: 30px;
+  }
+}
+
+.delivery {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  background-color: black;
+  padding: 5px;
+  border-radius: 4px;
+
+  svg {
+    font-size: 30px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,16 @@
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter_left {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.filter_left::-webkit-scrollbar-thumb {
+    background-color: red !important;
+}

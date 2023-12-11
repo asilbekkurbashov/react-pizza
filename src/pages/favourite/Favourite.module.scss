@@ -1,0 +1,23 @@
+.favourite {
+    margin-top: 130px;
+}
+
+.back {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show_pizzas {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

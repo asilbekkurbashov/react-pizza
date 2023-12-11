@@ -1,0 +1,59 @@
+.deliver {
+  margin-top: 130px;
+  .deliver_inner {
+    display: flex !important;
+    flex-direction: column;
+    height: 80vh;
+    position: relative;
+
+    .ul {
+      padding-bottom: 100px !important;
+      height: 90vh;
+    }
+  }
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back_pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    display: flex;
+    font-size: 22px;
+    margin-bottom: 10px;
+
+    span {
+      display: flex;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+  }
+
+  .allSum {
+    color: #ed6c02 !important;
+  }
+}
+.back_pay{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  max-width: 1260px;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.pay {
+  display: flex;
+  flex-direction: column;
+}

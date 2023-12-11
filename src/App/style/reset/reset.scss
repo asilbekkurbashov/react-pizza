@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  outline: none;
+}
+
+body {
+  min-height: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+span,
+i,
+input,
+select,
+textarea,
+svg {
+  display: inline-block;
+}
