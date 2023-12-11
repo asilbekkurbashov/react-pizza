@@ -13,8 +13,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 800,
-  height: 500,
+  maxWidth: 800,
+  width: "100%",
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
@@ -135,11 +135,11 @@ function MuiModal(props: I_Props) {
               Добавить в корзину за {pizza && pizza.sizes[indexSize].price}{" "}
               <MdOutlineCurrencyRuble />
             </Button>
-            <div className="closeModal">
-              <IconButton onClick={handleClose}>
-                <FaCircleXmark />
-              </IconButton>
-            </div>
+          </div>
+          <div className="closeModal">
+            <IconButton onClick={handleClose}>
+              <FaCircleXmark />
+            </IconButton>
           </div>
         </div>
       </Box>

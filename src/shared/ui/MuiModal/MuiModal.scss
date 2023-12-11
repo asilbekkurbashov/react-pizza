@@ -2,8 +2,19 @@
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
   height: 100%;
   gap: 20px;
+
+  .closeModal {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+  }
+
+  @media (max-width: "740px") {
+    grid-template-columns: 1fr;
+  }
 }
 
 .modal_pizza_left {
@@ -57,11 +68,6 @@
     position: absolute;
     bottom: 0px !important;
   }
-  .closeModal {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-  }
 }
 
 .stackSize {
@@ -73,4 +79,15 @@
 .stackType {
   display: grid !important ;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 740px) {
+  .modal_pizza_right {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
 }
