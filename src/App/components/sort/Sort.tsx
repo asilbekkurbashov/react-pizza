@@ -1,12 +1,10 @@
 import { useAppDispatch, useAppSelector } from '@/hooks/useRedux';
-import { useResponsive } from '@/hooks/useResponsive';
 import { sort } from '@/shared/data/data'
 import { SortActions } from '@/store/sort/SortSlice';
 import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 
 function Sort() {
     const { sortValue } = useAppSelector((state) => state.SortReducer);
-    const {isMobile} = useResponsive(600)
     const dispatch = useAppDispatch()
     const handleSort = (value: string) => {
         dispatch(SortActions.setSort(value));
@@ -20,7 +18,7 @@ function Sort() {
               id="demo-simple-select"
               label="Сортировка по"
               value={sortValue}
-              size={isMobile ? 'small' : 'medium'}
+              size={'small'}
             >
               {sort.map((elem) => (
                 <MenuItem

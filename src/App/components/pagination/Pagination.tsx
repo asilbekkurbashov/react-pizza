@@ -11,7 +11,7 @@ function Paginaton() {
       <Pagination
         count={3}
         onChange={(_, page) => dispatch(setPageCount(page))}
-        size="large"
+        size="medium"
         color="standard"
       />
     </div>

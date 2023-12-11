@@ -1,5 +1,4 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
-import { useResponsive } from "@/hooks/useResponsive";
 import { category } from "@/shared/data/data";
 import { dark, grey } from "@/shared/ui/createTheme";
 import { CategoryActions } from "@/store/category/CategorySlice";
@@ -11,7 +10,6 @@ function Category() {
   const handleCategory = (value: string) => {
     dispatch(CategoryActions.setCategoryType(value));
   };
-  const {isMobile} = useResponsive(600)
 
   return (
     <Stack direction={"row"} spacing={2}>
@@ -25,7 +23,7 @@ function Category() {
             onClick={() => handleCategory(elem.type)}
             variant="contained"
             color="neutral"
-            size={isMobile ? 'small' : 'medium'}
+            size={'small'}
           >
             {elem.name}
           </Button>
