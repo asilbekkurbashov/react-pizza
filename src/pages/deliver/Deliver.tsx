@@ -37,32 +37,32 @@ function Deliver() {
                   <DeliverItem key={elem.extraId} pizza={elem} />
                 ))}
               </ul>
-            </div>
-            <div className={styles.back_pay}>
-              <div className={styles.back}>
-                <p>
-                  Всего пицц: <span>{pizzaNumber} шт.</span>
-                </p>
-                <Button
-                  onClick={() => navigate("/")}
-                  variant="outlined"
-                  size="medium"
-                  color="success"
-                  startIcon={<MdChevronLeft />}
-                >
-                  Вернуться назад
-                </Button>
-              </div>
-              <div className={styles.pay}>
-                <p>
-                  Сумма заказа:{" "}
-                  <span className={styles.allSum}>
-                    {allPrice} <MdOutlineCurrencyRuble />
-                  </span>
-                </p>
-                <Button color="warning" size="medium" variant="contained">
-                  Оплатить сейчас
-                </Button>
+              <div className={styles.back_pay}>
+                <div className={styles.back}>
+                  <p>
+                    Всего пицц: <span>{pizzaNumber} шт.</span>
+                  </p>
+                  <Button
+                    onClick={() => navigate("/")}
+                    variant="outlined"
+                    size="small"
+                    color="success"
+                    startIcon={<MdChevronLeft />}
+                  >
+                    Вернуться назад
+                  </Button>
+                </div>
+                <div className={styles.pay}>
+                  <p>
+                    Сумма заказа:{" "}
+                    <span className={styles.allSum}>
+                      {allPrice} <MdOutlineCurrencyRuble />
+                    </span>
+                  </p>
+                  <Button color="warning" size="small" variant="contained">
+                    Оплатить сейчас
+                  </Button>
+                </div>
               </div>
             </div>
           </>

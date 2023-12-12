@@ -1,5 +1,5 @@
 .deliver {
-  margin-top: 120px;
+  margin-top: 110px;
   .deliver_inner {
     display: flex !important;
     flex-direction: column;
@@ -7,8 +7,10 @@
     position: relative;
 
     .ul {
-      padding-bottom: 100px !important;
-      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      height: 100%;
     }
   }
 }
@@ -18,17 +20,25 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+
+  h1{
+    font-size: 26px;
+  }
 }
 
 .back_pay {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
+  background-color: #fff;
+  z-index: 1;
+  // margin-top: 100px;
 
   p {
     display: flex;
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 8px;
 
     span {
       display: flex;
@@ -40,17 +50,6 @@
   .allSum {
     color: #ed6c02 !important;
   }
-}
-.back_pay{
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0px;
-  max-width: 1260px;
-  width: 100%;
-  padding: 20px 0;
-  background-color: #fff;
-  z-index: 1;
 }
 
 .pay {

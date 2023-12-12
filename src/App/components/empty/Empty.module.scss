@@ -1,17 +1,28 @@
 .empty {
-    text-align: center;
-    margin-top: 200px !important;
+  text-align: center;
+  margin-top: 200px !important;
+  h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 600px) {
+    img {
+      width: 250px;
+    }
     h3{
-        font-size: 26px;
-        margin-bottom: 10px;
+        font-size: 22px;
     }
-
     p{
-        margin-bottom: 20px;
     }
-
-    img{
-        width: 350px;
-        margin-bottom: 40px;
-    }
+  }
 }
