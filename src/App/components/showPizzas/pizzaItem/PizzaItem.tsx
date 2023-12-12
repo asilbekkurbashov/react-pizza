@@ -22,18 +22,18 @@ function PizzaItem(props: I_Props) {
 
   const handleClick = (item: I_Pizza) => {
     if (activeFavourite) {
-      setActiveFavourite(prev => !prev);
+      setActiveFavourite((prev) => !prev);
       dispatch(PizzaActions.setRemoveFavourite(item.id));
     } else {
-      setActiveFavourite(prev => !prev);
+      setActiveFavourite((prev) => !prev);
       dispatch(PizzaActions.setAddFavourite(item));
     }
   };
 
-  const showModal = (pizza:I_Pizza) => {
-    dispatch(PizzaActions.setModal(true))
-    dispatch(PizzaActions.setPizzaModal(pizza))
-  }
+  const showModal = (pizza: I_Pizza) => {
+    dispatch(PizzaActions.setModal(true));
+    dispatch(PizzaActions.setPizzaModal(pizza));
+  };
 
   return (
     <div key={pizza.id} className={styles.box_pizza}>
@@ -43,7 +43,12 @@ function PizzaItem(props: I_Props) {
         <h3 className={styles.price}>
           {pizza.price} <MdOutlineCurrencyRuble />
         </h3>
-        <Button onClick={() => showModal(pizza)} variant="outlined" color="warning" endIcon={<FaPlusSquare />}>
+        <Button
+          onClick={() => showModal(pizza)}
+          variant="outlined"
+          color="warning"
+          endIcon={<FaPlusSquare />}
+        >
           Выбрать
         </Button>
       </div>
