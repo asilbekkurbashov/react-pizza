@@ -33,9 +33,9 @@ function Favourite() {
                 <MuiDiaolog title="Закладка" text="закладку" />
               </div>
             </div>
-            <div className={styles.show_pizzas}>
+            <div className={`${styles.show_pizzas} ${favourite.length < 4 ? styles.grid : '' }`}>
               {favourite.map((elem) => (
-                <PizzaItem pizza={elem} />
+                <PizzaItem key={elem.id} pizza={elem} />
               ))}
             </div>
           </>

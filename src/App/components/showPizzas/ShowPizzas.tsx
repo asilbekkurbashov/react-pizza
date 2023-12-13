@@ -22,7 +22,7 @@ function ShowPizzas(props: I_Props) {
   const pizzas = debounce ? searchPizza : sortPizzas;
 
   return (
-    <div className={styles.show_pizzas}>
+    <div className={`${styles.show_pizzas} , ${pizzas && pizzas.length < 4 ? styles.grid : '' }`}>
       {pizzas &&
         pizzas.map((elem) => <PizzaItem key={elem.id} pizza={elem} />)}
     </div>
