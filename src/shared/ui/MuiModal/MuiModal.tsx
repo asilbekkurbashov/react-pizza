@@ -7,6 +7,7 @@ import { Backdrop, Box, Modal, Button, Stack, IconButton } from "@mui/material";
 import "./MuiModal.scss";
 import { useState } from "react";
 import { clsx } from "@/helper/clsx";
+import { useResponsive } from "@/hooks/useResponsive";
 
 const style = {
   position: "absolute" as "absolute",
@@ -29,6 +30,7 @@ function MuiModal(props: I_Props) {
   const { pizza } = props;
   const dispatch = useAppDispatch();
   const { modal } = useAppSelector((state) => state.PizzaReducer);
+  const {isMobile} = useResponsive(600)
   const [indexSize, setIndexSize] = useState(1);
   const [indexType, setIndexType] = useState(0);
   const size = indexSize === 0 ? 25 : indexSize === 1 ? 30 : 35;
@@ -108,6 +110,8 @@ function MuiModal(props: I_Props) {
                       onClick={() => handelIndexSize(i)}
                       variant={indexSize === i ? "contained" : "text"}
                       color="warning"
+                      size="small"
+                      style={{fontSize:isMobile ? '12px' : '14px'}}
                     >
                       {prev.size}
                     </Button>
@@ -122,6 +126,8 @@ function MuiModal(props: I_Props) {
                       disabled={!prev.isShow}
                       variant={indexType === i ? "contained" : "text"}
                       color="warning"
+                      size="small"
+                      style={{fontSize:isMobile ? '12px' : '14px'}}
                     >
                       {prev.typeName}
                     </Button>
@@ -133,6 +139,8 @@ function MuiModal(props: I_Props) {
               className="btn_buy"
               color="warning"
               variant="contained"
+              size="small"
+              style={{fontSize:isMobile ? '12px' : '14px'}}
             >
               Добавить в корзину за {pizza && pizza.sizes[indexSize].price}{" "}
               <MdOutlineCurrencyRuble />
