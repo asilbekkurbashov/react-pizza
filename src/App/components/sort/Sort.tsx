@@ -21,7 +21,7 @@ function Sort() {
           label="Сортировка по"
           value={sortValue}
           size={"small"}
-          style={{ fontSize: isMobile ? "12px" : "" }}
+          style={{ fontSize: isMobile ? "14px" : "" }}
         >
           {sort.map((elem) => (
             <MenuItem
