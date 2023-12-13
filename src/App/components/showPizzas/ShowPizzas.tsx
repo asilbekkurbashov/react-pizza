@@ -15,7 +15,7 @@ function ShowPizzas(props: I_Props) {
   const { search } = useAppSelector((state) => state.PizzaReducer);
   const { records } = usePaginationCount(data);
   const { sortPizzas } = useSortPizzas(records);
-  const debounce = useDebounce(search);
+  const debounce = useDebounce(search)?.toLowerCase();
   const searchPizza = sortPizzas?.filter((item) =>
     item.name.toLocaleLowerCase().includes(`${debounce}`)
   );
