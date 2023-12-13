@@ -22,8 +22,9 @@ function Favourite() {
                 <h1>Закладка</h1>
                 <IconButton
                   onClick={() => navigate("/")}
-                  style={{ fontSize: "40px" }}
+                  style={{ fontSize: "35px" }}
                   color="warning"
+                  size="small"
                 >
                   <BiSolidLeftArrowSquare />
                 </IconButton>

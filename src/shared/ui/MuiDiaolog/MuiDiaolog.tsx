@@ -41,6 +41,7 @@ function MuiDiaolog(props: I_Props) {
       <Button
         onClick={handleClickOpen}
         color="warning"
+        size="small"
         startIcon={<MdDeleteSweep />}
       >
         Очистить {text}

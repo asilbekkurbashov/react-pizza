@@ -6,10 +6,12 @@ import DeliverItem from "./deliverItem/DeliverItem";
 import { Button } from "@mui/material";
 import { MdChevronLeft, MdOutlineCurrencyRuble } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { useResponsive } from "@/hooks/useResponsive";
 
 function Deliver() {
   const { deliver } = useAppSelector((state) => state.PizzaReducer);
   const navigate = useNavigate();
+  const { isMobile } = useResponsive(600);
   const pizzaNumber = deliver
     .map((prev) => prev.count)
     .reduce((a, b) => a + b, 0);
@@ -48,6 +50,7 @@ function Deliver() {
                     size="small"
                     color="success"
                     startIcon={<MdChevronLeft />}
+                    style={{ fontSize: isMobile ? "11px" : "14px" }}
                   >
                     Вернуться назад
                   </Button>
@@ -59,7 +62,12 @@ function Deliver() {
                       {allPrice} <MdOutlineCurrencyRuble />
                     </span>
                   </p>
-                  <Button color="warning" size="small" variant="contained">
+                  <Button
+                    color="warning"
+                    size="small"
+                    variant="contained"
+                    style={{ fontSize: isMobile ? "11px" : "14px" }}
+                  >
                     Оплатить сейчас
                   </Button>
                 </div>
