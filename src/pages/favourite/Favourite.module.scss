@@ -19,19 +19,16 @@
 
 .show_pizzas {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 25px;
     margin-top: 20px;
     margin-bottom: 40px;
-    // &.grid {
-    //     grid-template-columns: repeat(4, 1fr);
 
-    //     @media(max-width:800px){
-    //         grid-template-columns: repeat(3,1fr);
-    //     }
-    //   }
+    @media (max-width:900px){
+        grid-template-columns: repeat(2,1fr) !important;
+    }
 
-    // @media (max-width: 600px){
-    //     grid-template-columns: repeat(1,1fr);
-    // }
+    @media (max-width: 600px){
+        grid-template-columns: repeat(1,1fr) !important;
+    }
 }
